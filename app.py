@@ -39,7 +39,7 @@ class ApiKeyPopup(ctk.CTkToplevel):
         self.attributes("-topmost", True)
         self.grab_set() 
         
-        ctk.CTkLabel(self, text="Creative Analyzer", font=ctk.CTkFont(size=22, weight="bold")).pack(pady=(30, 10))
+        ctk.CTkLabel(self, text="Ai Creative Analyzer", font=ctk.CTkFont(size=22, weight="bold")).pack(pady=(30, 10))
         ctk.CTkLabel(self, text="Please enter your Gemini API Key:", font=ctk.CTkFont(size=12), text_color="gray").pack(pady=5)
 
         self.entry = ctk.CTkEntry(self, placeholder_text="Enter API Key...", width=320, height=40, corner_radius=CORNER_RADIUS, show="*")
@@ -74,7 +74,7 @@ class ApiKeyPopup(ctk.CTkToplevel):
 class CreativeAnalyzer(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("Creative Analyzer")
+        self.title("Ai Creative Analyzer")
         self.geometry("1150x800")
         self.image_path = None
         self.client = None
@@ -102,7 +102,7 @@ class CreativeAnalyzer(ctk.CTk):
         self.sidebar = ctk.CTkFrame(self, width=350, corner_radius=0, fg_color="#f8f9fa")
         self.sidebar.grid(row=0, column=0, sticky="nsew", padx=0)
 
-        ctk.CTkLabel(self.sidebar, text="Creative Analyzer", font=ctk.CTkFont(size=24, weight="bold")).pack(pady=(40, 20))
+        ctk.CTkLabel(self.sidebar, text="Ai Creative Analyzer", font=ctk.CTkFont(size=24, weight="bold")).pack(pady=(40, 20))
         
         self.upload_btn = ctk.CTkButton(self.sidebar, text="Select Image", fg_color=MAIN_BLUE, hover_color=HOVER_BLUE, corner_radius=CORNER_RADIUS, height=40, command=self.upload_image)
         self.upload_btn.pack(pady=10, padx=40, fill="x")
